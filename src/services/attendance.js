@@ -1,12 +1,13 @@
 import { useMutation } from "@tanstack/react-query";
 import supabase from "./supabase";
 
+const table = "conference1"  
 const markPresent = async (person) => {
   // const day = getAwakeningDay();
   const isPresentKey = "ispresent";
   const { data: worker } = await supabase
-    .from("leader")
-    .select("*")
+  .from(table)
+  .select("*")
     .eq("id", person.id);
 
   const workerAttendance = worker[0][isPresentKey];
@@ -17,7 +18,7 @@ const markPresent = async (person) => {
   const dateISO = dateUTC.toISOString();
 
   const { data, error } = await supabase
-    .from("leader")
+    .from(table)
     .update({ [isPresentKey]: true, updatedat: dateISO })
     .eq("id", person.id);
 
@@ -30,7 +31,7 @@ const markPresent = async (person) => {
 
 const manualAttendance = async (person) => {
   const { data, error } = await supabase
-    .from("leader")
+    .from(table)
     .insert({ ...person, validate: true })
     .select("*");
 
@@ -43,7 +44,7 @@ const manualAttendance = async (person) => {
 const updateWorker = async (person) => {
   const { id, ...rest} = person
   const { data, error } = await supabase
-    .from("leader")
+    .from(table)
     .update({ ...rest, ispresent: true })
     .eq("id", person.id)
     .select("*");
