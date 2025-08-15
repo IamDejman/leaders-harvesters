@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import supabase from "./supabase";
 
-const table = "conference1"  
+const table = "conference2"  
 const markPresent = async (person) => {
   // const day = getAwakeningDay();
   const isPresentKey = "ispresent";
