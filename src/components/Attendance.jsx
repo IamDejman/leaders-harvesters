@@ -10,8 +10,9 @@ import { CheckBadgeIcon } from "@heroicons/react/16/solid";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { capitalize } from "lodash";
-import { capitalizeWords, departmentsWithTeams, teams, teamsSummary } from "../utils/teams";
+import { capitalizeWords } from "../utils/teams";
 import Select from "./Dropdown";
+import { departmentsWithTeams, teamsSummary } from "../utils/options";
 
 const Attendance = () => {
   const { debouncedSearch, search: searchValue } = useDebouncedSearch();
@@ -48,7 +49,7 @@ const Attendance = () => {
 
   const [activeTeam, setActiveTeam] = useState(activePerson.team);
 
-  const title = "Workers Meeting - Gbagada";
+  const title = "All Workers and Leaders Conference - Friday 15th August 2025";
 
   const handleSearch = (e) => {
     setQuery(e.target.value);
@@ -73,7 +74,7 @@ const Attendance = () => {
   };
 
   useEffect(() => {
-    setActiveTeam(activePerson.team)
+    setActiveTeam(activePerson.team);
   }, [activePerson.team]);
 
   const handleSave = () => {
@@ -141,7 +142,7 @@ const Attendance = () => {
   };
 
   const handleUpdate = () => {
-    if(!activePerson.firstname || !activePerson.lastname) {
+    if (!activePerson.firstname || !activePerson.lastname) {
       toast.error("First name or last name is missing");
       return;
     }
@@ -243,9 +244,9 @@ const Attendance = () => {
             alt="Harvesters International Christian Center Logo"
             className="w-32 h-32 mx-auto"
           />
-          <h1 className="text-2xl font-bold mt-4">
+          {/* <h1 className="text-2xl font-bold mt-4">
             Harvesters International Christian Centre, Gbagada campus
-          </h1>
+          </h1> */}
           <h2 className="text-2xl font-bold text-gray-500 mt-4">{title}</h2>
         </header>
         <div className="bg-white shadow-lg rounded-xl p-6 mb-24 mt-12">

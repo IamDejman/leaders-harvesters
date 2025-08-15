@@ -1,7 +1,7 @@
 import React from "react";
 import Select from "./Dropdown";
 import { useNavigate } from "react-router-dom";
-import { departmentsWithTeams } from "../utils/teams";
+import { departmentsWithTeams } from "../utils/options";
 
 const Summary = ({
   totalWorkers,

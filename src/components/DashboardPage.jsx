@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Summary from "./Summary";
 import supabase from "../services/supabase";
-import { teamsSummary } from "../utils/teams";
+import { teamsSummary } from "../utils/options";
 
 function DashboardPage() {
   const [totalWorkers, setTotalWorkers] = useState(0);

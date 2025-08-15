@@ -4,7 +4,7 @@ import supabase from "../services/supabase";
 import {
   departmentsWithTeams,
   teamsSummary,
-} from "../utils/teams";
+} from "../utils/options";
 
 function DashboardPageByDepartment() {
   const [totalWorkers, setTotalWorkers] = useState(0);
