@@ -34,6 +34,7 @@ const Attendance = () => {
     department: "",
     team: "",
     fullname: "",
+    workerrole: "",
     // email: "",
   });
 
@@ -44,6 +45,7 @@ const Attendance = () => {
     department: "",
     team: "",
     fullname: "",
+    workerrole: ""
     // email: "",
   });
 
@@ -457,7 +459,7 @@ const Attendance = () => {
                     className="mb-3"
                   />
                 </div>
-                {/* <input
+                <input
                   type="text"
                   placeholder="Role"
                   className="w-full p-2 border rounded-lg"
@@ -468,7 +470,7 @@ const Attendance = () => {
                       workerrole: e.target.value,
                     })
                   }
-                /> */}
+                />
                 <div className="flex space-x-2">
                   <button
                     onClick={resetCreate}
@@ -589,7 +591,7 @@ const Attendance = () => {
                     className="mb-3"
                   />
                 </div>
-                {/* <input
+                <input
                   type="text"
                   placeholder="Role"
                   className="w-full p-2 border rounded-lg"
@@ -600,7 +602,7 @@ const Attendance = () => {
                       workerrole: e.target.value,
                     })
                   }
-                /> */}
+                />
                 <div className="flex space-x-2">
                   <button
                     onClick={resetEdit}
