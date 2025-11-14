@@ -10,7 +10,7 @@ import { CheckBadgeIcon } from "@heroicons/react/16/solid";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { capitalize } from "lodash";
-import { capitalizeWords } from "../utils/teams";
+import { capitalizeWords, workerrolesoptions } from "../utils/teams";
 import Select from "./Dropdown";
 import { departmentsWithTeams, teamsSummary } from "../utils/options";
 
@@ -97,6 +97,10 @@ const Attendance = () => {
       toast.error("Department is missing");
       return;
     }
+    if (!newPerson.workerrole) {
+      toast.error("Role is missing");
+      return;
+    }
 
     const isPresentKey = "ispresent";
     setManuallySaving(true);
@@ -162,6 +166,10 @@ const Attendance = () => {
       toast.error("Department is missing");
       return;
     }
+    if (!activePerson.workerrole) {
+      toast.error("Role is missing");
+      return;
+    }
     const isPresentKey = "ispresent";
     setIsEditSaving(true);
     updateWorker(
@@ -223,14 +231,14 @@ const Attendance = () => {
     const options = departments
       ? departments.map((department) => ({
           label: department,
-          values: department,
+          value: department,
         }))
       : [];
 
     const finalOptions = [
       {
         label: "Choose department",
-        values: null,
+        value: null,
       },
     ].concat(options);
     return finalOptions;
@@ -459,18 +467,22 @@ const Attendance = () => {
                     className="mb-3"
                   />
                 </div>
-                <input
-                  type="text"
-                  placeholder="Role"
-                  className="w-full p-2 border rounded-lg"
-                  value={activePerson.workerrole}
-                  onChange={(e) =>
-                    setActivePerson({
-                      ...activePerson,
-                      workerrole: e.target.value,
-                    })
-                  }
-                />
+                <div>
+                  <Select
+                    options={[
+                      { label: "Choose role", value: "" },
+                      ...workerrolesoptions.filter(option => option.value !== "All")
+                    ]}
+                    value={newPerson.workerrole}
+                    onChange={(value) =>
+                      setNewPerson({
+                        ...newPerson,
+                        workerrole: value,
+                      })
+                    }
+                    className="mb-3"
+                  />
+                </div>
                 <div className="flex space-x-2">
                   <button
                     onClick={resetCreate}
@@ -591,18 +603,22 @@ const Attendance = () => {
                     className="mb-3"
                   />
                 </div>
-                <input
-                  type="text"
-                  placeholder="Role"
-                  className="w-full p-2 border rounded-lg"
-                  value={activePerson.workerrole}
-                  onChange={(e) =>
-                    setActivePerson({
-                      ...activePerson,
-                      workerrole: e.target.value,
-                    })
-                  }
-                />
+                <div>
+                  <Select
+                    options={[
+                      { label: "Choose role", value: "" },
+                      ...workerrolesoptions.filter(option => option.value !== "All")
+                    ]}
+                    value={activePerson.workerrole}
+                    onChange={(value) =>
+                      setActivePerson({
+                        ...activePerson,
+                        workerrole: value,
+                      })
+                    }
+                    className="mb-3"
+                  />
+                </div>
                 <div className="flex space-x-2">
                   <button
                     onClick={resetEdit}

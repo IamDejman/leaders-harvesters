@@ -28,7 +28,7 @@ const Summary = ({
     const options = departments
       ? departments.map((department) => ({
           label: department,
-          values: department,
+          value: department,
         }))
       : [];
     return options;
