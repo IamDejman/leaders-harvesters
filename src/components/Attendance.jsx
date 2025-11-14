@@ -51,7 +51,7 @@ const Attendance = () => {
 
   const [activeTeam, setActiveTeam] = useState(activePerson.team);
 
-  const title = "Leaders Conference - Saturday 18th October 2025";
+  const title = "Leaders Conference - Saturday 15th November 2025";
 
   const handleSearch = (e) => {
     setQuery(e.target.value);
