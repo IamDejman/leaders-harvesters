@@ -81,6 +81,10 @@ const AttendanceV2 = () => {
       toast.error("Phone number is missing");
       return;
     }
+    if (!newPerson.workerrole) {
+      toast.error("Role is missing");
+      return;
+    }
 
     const isPresentKey = "ispresent";
     setManuallySaving(true);
@@ -138,6 +142,10 @@ const AttendanceV2 = () => {
 
     if (!activePerson.phonenumber) {
       toast.error("Name or phone number is missing");
+      return;
+    }
+    if (!activePerson.workerrole) {
+      toast.error("Role is missing");
       return;
     }
     const isPresentKey = "ispresent";

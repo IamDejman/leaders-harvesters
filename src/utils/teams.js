@@ -54,16 +54,17 @@ export const leaderTeams = [
 
 export const workerrolesoptions = [
   { label: "All Roles", value: "All" },
+  { label: "Worker", value: "Worker" },
+  { label: "Small Group Leader/E-Group Leader/Connect Leader etc", value: "Small Group Leader/E-Group Leader/Connect Leader etc" },
+  { label: "Cell Leader", value: "Cell Leader" },
   { label: "Assistant HOD", value: "Assistant HOD" },
-  { label: "Campus Admin", value: "Campus Admin" },
-  { label: "Campus Pastors", value: "Campus Pastors" },
-  { label: "Community Leader", value: "Community Leader" },
-  { label: "Directional Leader", value: "Directional Leader" },
+  { label: "Zonal Leader", value: "Zonal Leader" },
   { label: "HOD", value: "HOD" },
-  { label: "Pastoral Leader/Team Head", value: "Pastoral Leader/Team Head" },
-  { label: "Small Group Leader/Cell leader", value: "Small Group Leader/Cell leader" },
-  { label: "Sub Team Head", value: "Sub Team Head" },
-  { label: "Zonal Leader", value: "Zonal Leader" }
+  { label: "Sub team Head (heads more 2 or more departments)", value: "Sub team Head (heads more 2 or more departments)" },
+  { label: "Community Leader", value: "Community Leader" },
+  { label: "District Pastor", value: "District Pastor" },
+  { label: "Pastoral Leader", value: "Pastoral Leader" },
+  { label: "Directional Leader", value: "Directional Leader" }
 ]
 
 export const campusoptions = [
