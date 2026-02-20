@@ -17,7 +17,7 @@ import { departmentsWithTeams, teamsSummary } from "../utils/options";
 const Attendance = () => {
   const { debouncedSearch, search: searchValue } = useDebouncedSearch();
   const { data: filteredPeople, isLoading } = useSearchWorker(searchValue);
-  const { mutate: markAttendanceMutation } = useAttendance();
+  // const { mutate: markAttendanceMutation } = useAttendance();
   const { mutate: manualAttendanceMutation } = useManualAttendance();
   const { mutate: updateWorker } = useWorkerUpdate();
   const [query, setQuery] = useState("");

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Summary from "./Summary";
 import supabase from "../services/supabase";
 import {
-  departmentsWithTeams,
+  // departmentsWithTeams,
   teamsSummary,
 } from "../utils/options";
 
