@@ -45,7 +45,7 @@ const AttendanceV2 = () => {
     workerrole: "",
     campus: "",
   });
-  const title = "Leaders Meeting - October 2025";
+  const title = "Workers Meeting - Saturday 21st February 2026";
 
   const handleSearch = (e) => {
     setQuery(e.target.value);

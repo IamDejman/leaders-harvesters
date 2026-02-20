@@ -62,8 +62,8 @@ const Summary = ({
         )}
         <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-lg">
           <h2 className="text-xl font-bold text-center mb-4 px-24">
-            Leaders Attendance Dashboard - {team === "All" ? "All Teams" : team}{" "}
-            - 26 April 2025
+            Workers Attendance Dashboard - {team === "All" ? "All Teams" : team}{" "}
+            - 21st February 2026
           </h2>
           <div className="grid grid-cols-2 gap-4 text-center">
             <div className="p-4 bg-blue-200 rounded-lg">
