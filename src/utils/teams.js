@@ -55,7 +55,10 @@ export const leaderTeams = [
 export const workerrolesoptions = [
   { label: "All Roles", value: "All" },
   { label: "Worker", value: "Worker" },
-  { label: "Small Group Leader/E-Group Leader/Connect Leader etc", value: "Small Group Leader/E-Group Leader/Connect Leader etc" },
+  { label: "Small Group Leader", value: "Small Group Leader" },
+  { label: "House Church Leader", value: "House Church Leader" },
+  { label: "E-Group Leader", value: "E-Group Leader" },
+  { label: "Connect Leader", value: "Connect Leader" },
   { label: "Cell Leader", value: "Cell Leader" },
   { label: "Assistant HOD", value: "Assistant HOD" },
   { label: "Zonal Leader", value: "Zonal Leader" },
