@@ -23,7 +23,7 @@ const Attendance = () => {
   const [query, setQuery] = useState("");
   const [isCreating, setIsCreating] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-  const [mutateIsLoadingId, setMutateIsLoadingId] = useState(0);
+  // const [mutateIsLoadingId, setMutateIsLoadingId] = useState(0);
   const [manuallySaving, setManuallySaving] = useState(false);
   const [isEditSaving, setIsEditSaving] = useState(false);
   const queryClient = useQueryClient();
@@ -206,20 +206,20 @@ const Attendance = () => {
     );
   };
 
-  const handleMarkPresent = (person) => {
-    setMutateIsLoadingId(person.id);
-    markAttendanceMutation(person, {
-      onSuccess() {
-        toast.success("Attendance marked successfully");
-        setMutateIsLoadingId(0);
-        queryClient.invalidateQueries();
-      },
-      onError(error) {
-        setMutateIsLoadingId(0);
-        throw error;
-      },
-    });
-  };
+  // const handleMarkPresent = (person) => {
+  //   setMutateIsLoadingId(person.id);
+  //   markAttendanceMutation(person, {
+  //     onSuccess() {
+  //       toast.success("Attendance marked successfully");
+  //       setMutateIsLoadingId(0);
+  //       queryClient.invalidateQueries();
+  //     },
+  //     onError(error) {
+  //       setMutateIsLoadingId(0);
+  //       throw error;
+  //     },
+  //   });
+  // };
 
   const handleEdit = (person) => {
     // Implement edit functionality
