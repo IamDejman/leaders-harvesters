@@ -18,7 +18,7 @@
 --     isconfirmed BOOLEAN,
 -- );
 
-CREATE OR REPLACE FUNCTION get_search_results(search_text TEXT)
+CREATE OR REPLACE FUNCTION get_search_results_v2(search_text TEXT)
 RETURNS SETOF record
 LANGUAGE sql
 AS $$
@@ -35,6 +35,8 @@ AS $$
         p.workerrole,
         p.updatedat,
         p.fullnamereverse,
+        p.fullnamenoothername,
+        p.fullnamenoothernamereverse,
         p.ispresent,
         p.validate,
         p.isactive,
@@ -52,4 +54,6 @@ AS $$
         OR p.department ILIKE '%' || search_text || '%'
         OR p.email ILIKE '%' || search_text || '%'
         OR p.campus ILIKE '%' || search_text || '%'
+        OR p.fullnamenoothername ILIKE '%' || search_text || '%'
+        OR p.fullnamenoothernamereverse ILIKE '%' || search_text || '%'
 $$;
