@@ -21,11 +21,13 @@ export const departmentsWithTeams = {
     "Admin and Facility",
     "Communications (DMU)",
     "Finance",
+    "Others",
   ],
   "Interactive Groups": [
     "Men of Harvest",
     "Singles Ministry",
     "Women of Wisdom",
+    "Others",
   ],
   Maturity: [
     "Courses HSDC",
@@ -33,6 +35,7 @@ export const departmentsWithTeams = {
     "Group Partnership",
     "Membership",
     "Prayer and Bible Study",
+    "Others",
   ],
   Membership: [
     "Benevolence",
@@ -47,6 +50,7 @@ export const departmentsWithTeams = {
     "Membership Admin",
     "New Convert",
     "Weddings",
+    "Others",
   ],
   Ministry: [
     "Call Centre",
@@ -64,6 +68,7 @@ export const departmentsWithTeams = {
     "Prison Ministry",
     "Recruitment and Assimilation",
     "Workforce Admin",
+    "Others",
   ],
   Mission: [
     "Evangelism",
@@ -74,6 +79,7 @@ export const departmentsWithTeams = {
     "Publicity",
     "Sub team-Missions",
     "Target Missions",
+    "Others",
   ],
   "Next Gen": [
     "Administration - Kidszone",
@@ -84,6 +90,7 @@ export const departmentsWithTeams = {
     "Programming and Environment - Stirhouse",
     "Reach and Partnership - Kidszone",
     "Reach and Partnership - Stirhouse",
+    "Others",
   ],
   Programs: [
     "Diamond ET",
@@ -123,13 +130,16 @@ export const departmentsWithTeams = {
     "Venue Management - Feyisayo Phillip team",
     "Venue Management - Tosin Agbetuyi team",
     "Venue Management - Zeina team",
+    "Others",
   ],
   "Senior Leadership": [
     "Directional Leaders",
     "Pastoral Leaders",
+    "Others",
   ],
   NLP: [
     "NLP",
+    "Others",
   ],
 };
 
