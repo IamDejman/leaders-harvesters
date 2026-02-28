@@ -457,7 +457,7 @@ const Attendance = () => {
                       setActiveTeam(value);
                       setNewPerson({
                         ...newPerson,
-                        team: capitalizeWords(value),
+                        team: value,
                       });
                     }}
                     className="mb-3"
@@ -608,7 +608,7 @@ const Attendance = () => {
                       setActiveTeam(value);
                       setActivePerson({
                         ...activePerson,
-                        team: capitalizeWords(value),
+                        team: value,
                       });
                     }}
                     className="mb-3"
