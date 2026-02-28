@@ -42,7 +42,7 @@ const Attendance = () => {
     email: "",
   });
 
-  const title = "Workers Meeting - Gbagada";
+  const title = "Group 2 Campus Leaders/Ambassadors Meeting - Gbagada";
 
   const handleSearch = (e) => {
     setQuery(e.target.value);
