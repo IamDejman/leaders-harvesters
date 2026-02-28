@@ -84,6 +84,7 @@ export const campusoptions = [
   { label: "Magodo", value: "Magodo" },
   { label: "Portharcourt", value: "Portharcourt" },
   { label: "Surulere", value: "Surulere" },
+  { label: "New Lagos", value: "New Lagos" },
   { label: "Yaba", value: "Yaba" }
 ]
 
