@@ -30,9 +30,10 @@ const markPresent = async (person) => {
 };
 
 const manualAttendance = async (person) => {
+  const dateISO = new Date().toISOString();
   const { data, error } = await supabase
     .from(table)
-    .insert({ ...person, validate: true })
+    .insert({ ...person, validate: true, updatedat: dateISO })
     .select("*");
 
   if (error) {
@@ -43,9 +44,10 @@ const manualAttendance = async (person) => {
 };
 const updateWorker = async (person) => {
   const { id, ...rest} = person
+  const dateISO = new Date().toISOString();
   const { data, error } = await supabase
     .from(table)
-    .update({ ...rest, ispresent: true })
+    .update({ ...rest, ispresent: true, updatedat: dateISO })
     .eq("id", person.id)
     .select("*");
 
