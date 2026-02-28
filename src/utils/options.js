@@ -15,6 +15,7 @@ export const departmentsWithTeams = {
     "Shomolu 2 Community",
     "Sunrise Community",
     "Trailblazer Community",
+    "Others",
   ],
   "General Service": [
     "Admin and Facility",
