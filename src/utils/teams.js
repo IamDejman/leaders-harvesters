@@ -67,7 +67,8 @@ export const workerrolesoptions = [
   { label: "Community Leader", value: "Community Leader" },
   { label: "District Pastor", value: "District Pastor" },
   { label: "Pastoral Leader", value: "Pastoral Leader" },
-  { label: "Directional Leader", value: "Directional Leader" }
+  { label: "Directional Leader", value: "Directional Leader" },
+  { label: "Ambassador", value: "Ambassador" }
 ]
 
 export const campusoptions = [

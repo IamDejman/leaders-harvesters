@@ -127,6 +127,9 @@ export const departmentsWithTeams = {
     "Directional Leaders",
     "Pastoral Leaders",
   ],
+  NLP: [
+    "NLP",
+  ],
 };
 
 export const teamsSummary = [
@@ -173,5 +176,9 @@ export const teamsSummary = [
   {
     label: "Senior Leadership",
     value: "Senior Leadership",
+  },
+  {
+    label: "NLP",
+    value: "NLP",
   },
 ];
