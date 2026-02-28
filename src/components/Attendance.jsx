@@ -10,7 +10,7 @@ import { CheckBadgeIcon } from "@heroicons/react/16/solid";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { capitalize } from "lodash";
-import { capitalizeWords, workerrolesoptions } from "../utils/teams";
+import { capitalizeWords, workerrolesoptions, campusoptions } from "../utils/teams";
 import Select from "./Dropdown";
 import { departmentsWithTeams, teamsSummary } from "../utils/options";
 
@@ -35,6 +35,7 @@ const Attendance = () => {
     team: "",
     fullname: "",
     workerrole: "",
+    campus: "",
     // email: "",
   });
 
@@ -45,14 +46,15 @@ const Attendance = () => {
     department: "",
     team: "",
     fullname: "",
-    workerrole: ""
+    workerrole: "",
+    campus: "",
     // email: "",
   });
 
   const [activeTeam, setActiveTeam] = useState(activePerson.team);
 
   // trigger deployment comment
-  const title = "Group 2 Campus Leaders/Ambassadors Meeting - Saturday 21st February 2026";
+  const title = "Group 2 Campus Leaders/Ambassadors Meeting - Saturday 28th February 2026";
 
   const handleSearch = (e) => {
     setQuery(e.target.value);
@@ -125,6 +127,7 @@ const Attendance = () => {
             fullname: "",
             // email: "",
             workerrole: "",
+            campus: "",
           });
           setManuallySaving(false);
           setIsCreating(false);
@@ -139,6 +142,7 @@ const Attendance = () => {
             fullname: "",
             // email: "",
             workerrole: "",
+            campus: "",
           });
           setManuallySaving(false);
           setIsCreating(false);
@@ -193,6 +197,7 @@ const Attendance = () => {
             fullname: "",
             // email: "",
             workerrole: "",
+            campus: "",
           });
           setIsEditSaving(false);
           setIsEditing(false);
@@ -484,6 +489,22 @@ const Attendance = () => {
                     className="mb-3"
                   />
                 </div>
+                <div>
+                  <Select
+                    options={[
+                      { label: "Choose campus", value: "" },
+                      ...campusoptions.filter(option => option.value !== "All")
+                    ]}
+                    value={newPerson.campus}
+                    onChange={(value) =>
+                      setNewPerson({
+                        ...newPerson,
+                        campus: value,
+                      })
+                    }
+                    className="mb-3"
+                  />
+                </div>
                 <div className="flex space-x-2">
                   <button
                     onClick={resetCreate}
@@ -615,6 +636,22 @@ const Attendance = () => {
                       setActivePerson({
                         ...activePerson,
                         workerrole: value,
+                      })
+                    }
+                    className="mb-3"
+                  />
+                </div>
+                <div>
+                  <Select
+                    options={[
+                      { label: "Choose campus", value: "" },
+                      ...campusoptions.filter(option => option.value !== "All")
+                    ]}
+                    defaultValue={activePerson.campus}
+                    onChange={(value) =>
+                      setActivePerson({
+                        ...activePerson,
+                        campus: value,
                       })
                     }
                     className="mb-3"
